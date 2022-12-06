@@ -1,0 +1,10 @@
+{
+	"name": "drupal/archipelago_subtheme_barnard",
+	"type": "drupal-theme",
+	"description": "SASS subtheme for Barrio Theme.",
+	"homepage": "http://drupal.org/project/archipelago_subtheme_barnard",
+	"license": "GPL-2.0+",
+	"require": {
+		"drupal/bootstrap_barrio": ">=5.1.3"
+	}
+}

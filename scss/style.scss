@@ -1,0 +1,251 @@
+/*
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+  background: $white;
+}
+
+
+/* COLORS
+--------------------------------------------------*/
+
+a {
+  color: $accent-shade;
+}
+
+.bg-inverse {
+  background: $primary-shade !important;
+}
+
+.site-footer {
+  background: $accent-shade !important;
+}
+
+.menu--main li:not(.dropdown-item) > a {
+  color: $primary-shade;
+}
+
+.menu--account li a {
+  color: $primary-shade;
+}
+
+.site-name-slogan a {
+  text-decoration: none;
+}
+
+.card-group img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.card-group .field--type-image {
+  margin: 0
+}
+
+.slick {
+  width: 100%;
+}
+
+.slick>div {
+  margin: 0 15px;
+}
+
+/* Barnard Primary Button */
+.btn-primary:hover {
+  @include button-variant($primary-shade, $primary-shade);
+  background-color: shade-color($primary-shade, $btn-hover-bg-shade-amount);
+  border-color: shade-color($primary-shade, $btn-hover-bg-shade-amount);
+}
+
+
+.dropdown-menu {
+  --bs-dropdown-zindex: 9999 !important;
+  background-color: $quaternary-shade !important;;
+  border-radius: 0 !important;
+}
+
+/* Barnard hide Form labels for exposed form Elements */
+.views-exposed-form {
+  label {
+    @extend .invisible;
+  }
+}
+
+/* Barnard overrides all sizes except small */
+@include media-breakpoint-up(md) {
+
+  .nav-item.menu-item--expanded.dropdown {
+    z-index: 9999;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .js-form-type-search-api-autocomplete {
+    flex-grow: 1 !important;
+  }
+  .flex-nowrap {
+    display:flex;
+  }
+  /* Barnard Front Page Panel Menu Under search Box */
+
+  #frontpage-link {
+    height: 30vh;
+    .btn-primary {
+      color: $primary-shade;
+      text-decoration: underline;
+      background-color: rgba($tertiary-shade, .95);
+      border-color: rgba($tertiary-shade, .95);
+      &:hover {
+        color: $navbar-dark-bg-active-color;
+      }
+
+      &:active {
+        color: $navbar-dark-bg-active-color;
+      }
+    }
+  }
+  /* Barnard Front Page Panel Menu */
+  .frontpage-panel {
+    /* To avoid modifying left/right padding already present in each internal element (12 px)
+       we set 13px to sum up 25px
+     */
+    padding: 25px 13px;
+    a:not(.navbar-brand) {
+      color: $primary-shade;
+      text-decoration: underline;
+      &:hover {
+        color: $navbar-dark-bg-active-color;
+      }
+      &:active {
+        color: $navbar-dark-bg-active-color;
+      }
+    }
+    background-color: rgba($tertiary-shade, .95);
+    border-radius: var(--bs-border-radius-sm);
+    font-family: Arial, sans-serif;
+    color: #F5F2E5;
+    .nav-item {
+      a.nav-link {
+        color: $primary-shade;
+        text-decoration: underline;
+        &:hover {
+          color: $navbar-dark-bg-active-color;
+        }
+        &:active {
+          color: $navbar-dark-bg-active-color;
+        }
+      }
+    }
+    #frontpage-menu-main {
+      padding-top: map-get($spacers, 3);
+      ul {
+        display: inline-flex;
+        list-style: none;
+        padding-inline-start: 0;
+        column-gap: map-get($spacers, 2);
+      }
+    }
+    #about-main {
+      padding-top: map-get($spacers, 3);
+    }
+  }
+  #navbar-top .navbar-nav{
+    flex-direction: row;
+    height: 87px;
+    align-items: center;
+    column-gap: map-get($spacers, 4); // Same as px-4
+  }
+  #navbar-main {
+    height: 72px;
+  }
+  #navbar-main .views-exposed-form form {
+    display: flex;
+    align-items: center;
+    height: auto;
+    .form-wrapper {
+      display: flex;
+    }
+    .form-item-search-api-fulltext {
+      @include make-col(10, 12);
+    }
+  }
+}
+/* Barnard Navbar Top override Menu Links */
+#navbar-top .navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: $navbar-dark-bg-active-color;
+    }
+    .nav-link:hover {
+      color: $navbar-dark-hover-color;
+    }
+  }
+}
+/*
+.dropdown-item {
+display: block;
+width: 100%;
+padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+clear: both;
+font-weight: normal;
+color: var(--bs-dropdown-link-color);
+text-align: inherit;
+white-space: nowrap;
+background-color: transparent;
+border: 0;
+
+*/
+:root {
+  .archipelago-barnard-theme:not(.path-frontpage) {
+      #page {
+        padding-bottom: map-get($spacers, 4);
+        .view-content {
+          margin-bottom: map-get($spacers, 4);
+        }
+      }
+    }
+  .archipelago-barnard-theme {
+    .sidebar .block {
+      border-style: none;
+      padding: 0 0 1rem 0;
+    }
+    .accordion {
+      --bs-accordion-active-bg: #{$white};
+      /* See https://yoksel.github.io/url-encoder/ so good */
+      --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+      --bs-accordion-btn-icon-transform: scale(1.5);
+      --bs-accordion-btn-active-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+      --bs-accordion-border-radius: 0;
+
+    }
+    .dropdown-menu {
+      --bs-dropdown-link-color: var(--bs-secondary);
+      --bs-dropdown-link-hover-color: #{$link-hover-color};
+      --bs-dropdown-link-active-color: #{$link-hover-color};
+      --bs-dropdown-link-active-bg: var(--bs-primary);
+      --bs-dropdown-link-hover-bg: var(--bs-body-bg);
+    }
+    .sidebar h2, .sidebar .h2 {
+      border-bottom: none;
+      margin: 0;
+      text-shadow: none;
+    }
+    .pagination {
+      --bs-pagination-active-bg: var(--bs-secondary);
+      --bs-pagination-active-border-color: var(--bs-secondary);
+      --bs-pagination-active-color: var(--bs-body-bg);
+    }
+  }
+}
+
