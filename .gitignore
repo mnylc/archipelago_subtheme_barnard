@@ -4,3 +4,7 @@ templates/.DS_Store
 node_modules/*
 
 .DS_Store
+.idea/vcs.xml
+.idea/modules.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/archipelago_subtheme_barnard.iml

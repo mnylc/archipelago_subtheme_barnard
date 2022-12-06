@@ -207,6 +207,11 @@ border: 0;
 
 */
 :root {
+
+  .archipelago-barnard-theme.path-frontpage .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
   .archipelago-barnard-theme:not(.path-frontpage) {
       #page {
         padding-bottom: map-get($spacers, 4);
