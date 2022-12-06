@@ -218,8 +218,11 @@ border: 0;
       .view-content {
         margin-bottom: map-get($spacers, 4);
         &.row > div {
-          margin-bottom: map-get($spacers, 2);
+          margin-bottom: map-get($spacers, 5);
           border-bottom-width: var(--bs-border-width);
+          border-bottom-style: solid;
+          border-bottom-color: $accent-shade; /* instead of #979797 which is never used somewhere else */
+          padding-bottom: map-get($spacers, 4);
         }
       }
     }
