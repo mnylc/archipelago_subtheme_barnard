@@ -213,13 +213,17 @@ border: 0;
     --bs-gutter-y: 0;
   }
   .archipelago-barnard-theme:not(.path-frontpage) {
-      #page {
-        padding-bottom: map-get($spacers, 4);
-        .view-content {
-          margin-bottom: map-get($spacers, 4);
+    #page {
+      padding-bottom: map-get($spacers, 4);
+      .view-content {
+        margin-bottom: map-get($spacers, 4);
+        &.row > div {
+          margin-bottom: map-get($spacers, 2);
+          border-bottom-width: var(--bs-border-width);
         }
       }
     }
+  }
   .archipelago-barnard-theme {
     .sidebar .block {
       border-style: none;
