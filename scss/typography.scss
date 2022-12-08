@@ -31,10 +31,11 @@ $headings-font-family:  $font-family-serif !default;
 $btn-font-weight: $font-weight-medium !default;
 
 $navbar-brand-font-size: $font-size-base * 2.5;
+$navbar-brand-font-size-mobile: $font-size-base * 1.5;
 $nav-link-font-weight: $font-weight-medium;
+
 .navbar-brand {
   font-family: $font-family-serif;
-  font-size: $navbar-brand-font-size !important;
 }
 
 .blockquote-footer {

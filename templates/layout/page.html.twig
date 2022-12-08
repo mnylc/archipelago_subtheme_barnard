@@ -63,23 +63,28 @@
  */
 #}
 {%
-  set content_top_classes = [
+  set content_top_classescontent_top_classes = [
   'col-md-10',
-  'cold-lg-10',
+  'col-lg-10',
   'col-sm-12',
 ]
 %}
+{%if 'container' == container %}
+  {% set container = 'container-lg' %}
+{% endif %}
 <div id="page-wrapper">
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
       {% block head %}
         {% if page.secondary_menu or page.top_header or page.top_header_form %}
-          <nav{{ navbar_top_attributes }}>
+          <nav{{ navbar_top_attributes.addClass(['navbar-expand-lg']) }}>
             {% if container_navbar %}
-            <div class="container">
+            <div class="{{ container }}">
               {% endif %}
-              {{ page.secondary_menu }}
               {{ page.top_header }}
+              <button class="navbar-toggler collapsed ml-auto" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbarTop" aria-controls="CollapsingNavbarTop" aria-expanded="false" aria-label="Toggle Top navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="{{ navbar_collapse_class }}" id="CollapsingNavbarTop">
+              {{ page.secondary_menu }}
               {% if page.top_header_form %}
                 <div class="form-inline navbar-form ms-auto">
                   {{ page.top_header_form }}
@@ -92,7 +97,7 @@
         {% endif %}
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
-          <div class="container">
+          <div class="{{ container }}">
             {% endif %}
             {{ page.header }}
             {% if page.primary_menu or page.header_form %}

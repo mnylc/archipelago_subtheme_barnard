@@ -80,41 +80,10 @@ a {
   }
 }
 
-/* Barnard overrides all sizes except small */
-@include media-breakpoint-up(md) {
-
-  .nav-item.menu-item--expanded.dropdown {
-    z-index: 9999;
-  }
-
-  .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-
-  .js-form-type-search-api-autocomplete {
-    flex-grow: 1 !important;
-  }
-  .flex-nowrap {
-    display:flex;
-  }
+@include media-breakpoint-up(xs) {
   /* Barnard Front Page Panel Menu Under search Box */
 
-  #frontpage-link {
-    height: 30vh;
-    .btn-primary {
-      color: $primary-shade;
-      text-decoration: underline;
-      background-color: rgba($tertiary-shade, .95);
-      border-color: rgba($tertiary-shade, .95);
-      &:hover {
-        color: $navbar-dark-bg-active-color;
-      }
 
-      &:active {
-        color: $navbar-dark-bg-active-color;
-      }
-    }
-  }
   /* Barnard Front Page Panel Menu */
   .frontpage-panel {
     /* To avoid modifying left/right padding already present in each internal element (12 px)
@@ -160,6 +129,51 @@ a {
       padding-top: map-get($spacers, 3);
     }
   }
+  #frontpage-link {
+    height: 30vh;
+    .btn-primary {
+      color: $primary-shade;
+      text-decoration: underline;
+      background-color: rgba($tertiary-shade, .95);
+      border-color: rgba($tertiary-shade, .95);
+      &:hover {
+        color: $navbar-dark-bg-active-color;
+      }
+
+      &:active {
+        color: $navbar-dark-bg-active-color;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-brand {
+    font-size: $navbar-brand-font-size-mobile;
+  }
+}
+
+/* Barnard overrides all sizes except small */
+@include media-breakpoint-up(md) {
+
+  .navbar-brand {
+    font-size: $navbar-brand-font-size;
+  }
+  .nav-item.menu-item--expanded.dropdown {
+    z-index: 9999;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .js-form-type-search-api-autocomplete {
+    flex-grow: 1 !important;
+  }
+  .flex-nowrap {
+    display:flex;
+  }
+
   #navbar-top .navbar-nav{
     flex-direction: row;
     height: 87px;
