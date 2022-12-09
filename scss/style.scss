@@ -151,6 +151,13 @@ a {
   .navbar-brand {
     font-size: $navbar-brand-font-size-mobile;
   }
+  #navbar-top {
+    padding: 0 0.5rem;
+    min-height: 67px;
+  }
+  .navbar-toggler {
+    font-size: 0.75em;
+  }
 }
 
 /* Barnard overrides all sizes except small */
@@ -206,6 +213,7 @@ a {
     }
   }
 }
+
 /*
 .dropdown-item {
 display: block;
@@ -221,13 +229,24 @@ border: 0;
 
 */
 :root {
-
+  .form-row {
+    display:flex;
+  }
   .archipelago-barnard-theme.path-frontpage .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
   }
   .archipelago-barnard-theme:not(.path-frontpage) {
     #page {
+      .navbar-toggler {
+        border-color: var(--bs-primary);
+        .navbar-toggler-icon {
+          background-color: var(--bs-primary);
+          background-image: none;
+          -webkit-mask-image: var(--bs-navbar-toggler-icon-bg);
+          mask-image: var(--bs-navbar-toggler-icon-bg);
+        }
+      }
       padding-bottom: map-get($spacers, 4);
       .view-content {
         margin-bottom: map-get($spacers, 4);
