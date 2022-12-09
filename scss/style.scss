@@ -264,7 +264,9 @@ border: 0;
       }
     }
   }
+
   .archipelago-barnard-theme {
+    --bs-nav-pills-link-active-bg: var(--bs-primary);
     .sidebar .block {
       border-style: none;
       padding: 0 0 1rem 0;
