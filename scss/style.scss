@@ -89,7 +89,7 @@ a {
     /* To avoid modifying left/right padding already present in each internal element (12 px)
        we set 13px to sum up 25px
      */
-    padding: 25px 13px;
+    padding: 25px 25px;
     a:not(.navbar-brand) {
       color: $primary-shade;
       text-decoration: underline;
