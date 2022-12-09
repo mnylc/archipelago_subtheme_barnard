@@ -82,7 +82,11 @@ a {
 
 @include media-breakpoint-up(xs) {
   /* Barnard Front Page Panel Menu Under search Box */
-
+  .toolbar-fixed {
+    .ui-front {
+      z-index:1200
+    }
+  }
 
   /* Barnard Front Page Panel Menu */
   .frontpage-panel {
