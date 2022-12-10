@@ -40,16 +40,17 @@
 
 <div{{ attributes.addClass(classes) }}>
   <div class="accordion-item">
+    {#  Title suffix is used to add the contextual link. This way it does not get in the way of the accordion! #}
+    {{ title_suffix }}
     <div class="accordion-header" id="{{attributes.id ~ '-heading'}}">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{attributes.id ~ '-body'}}" aria-expanded="true" aria-controls=""{{attributes.id ~ '-heading'}}"">
       {{ title_prefix }}
       {% if label %}
       <h2 {{ title_attributes }}>{{ label }}</h2>
       {% endif %}
-      {{ title_suffix }}
       </button>
     </div>
-    <div id="{{attributes.id ~ '-body'}}" class="accordion-collapse collapse show" aria-labelledby="{{attributes.id ~'-heading'}}">
+    <div id="{{attributes.id ~ '-body'}}" class="accordion-collapse collapse" aria-labelledby="{{attributes.id ~'-heading'}}">
       <div class="accordion-body">
         {% block content %}
           <div{{ content_attributes.addClass('content') }}>
