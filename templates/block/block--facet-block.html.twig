@@ -50,7 +50,15 @@
       {% endif %}
       </button>
     </div>
-    <div id="{{attributes.id ~ '-body'}}" class="accordion-collapse collapse" aria-labelledby="{{attributes.id ~'-heading'}}">
+    {% if content[0]['#attributes']['class'] is defined and 'facet-active' in content[0]['#attributes']['class'] %}
+      {% set collapsed_class = 'show' %}
+    {% else %}
+      {% set collapsed_class = null %}
+    {% endif %}
+    {% if content[0]["#facet"] is not defined %}
+      {% set collapsed_class = 'show' %}
+    {% endif %}
+    <div id="{{attributes.id ~ '-body'}}" class="accordion-collapse collapse {{ collapsed_class }}" aria-labelledby="{{attributes.id ~'-heading'}}">
       <div class="accordion-body">
         {% block content %}
           <div{{ content_attributes.addClass('content') }}>
