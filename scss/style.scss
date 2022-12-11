@@ -233,6 +233,28 @@ border: 0;
 
 */
 :root {
+  /* Alertw */
+  .alert-success {
+    color: #{$link-color};
+    background-color: #cdecd5;
+    border-color:transparent;
+  }
+  .alert-info {
+    color: #{$link-color};
+    background-color: #e3eee6;
+    border-color: transparent;
+  }
+  .alert-warning {
+    color: #{$link-color};
+    background-color: #e9d4af;
+    border-color: transparent;
+  }
+  .alert-danger {
+    color: #{$link-color};
+    background-color: #de7777;
+    border-color: transparent;
+  }
+  /*Facet summary */
   .block-facets-summary {
     ul {
       padding-left:0;

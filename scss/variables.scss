@@ -18,7 +18,7 @@ $white: #fff;
 $gray-100: #f8f9fa;
 $gray-800: #333333;
 
-$theme-colors: ( primary: $primary-shade, secondary: $accent-shade, tertiary: $tertiary-shade, quaternary:$quaternary-shade, success:$green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$theme-colors: (primary: $primary-shade, secondary: $accent-shade, tertiary: $tertiary-shade, quaternary:$quaternary-shade, success:$green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
 $brand-primary: $accent-shade;
 //$brand-success: $green;
 //$brand-info: $teal;
@@ -57,17 +57,8 @@ $border-radius: .25rem !default;
 $input-btn-padding-y: 0.5rem !default;
 
 :root {
-  .alert-success {
-    --bs-alert-bg: #d4edda;
-  }
-  .alert-warning {
-    --bs-warning-bg: #ede4d4;
-  }
-  .alert-error {
-    --bs-error-bg: #edd4d4;
-  }
-
   --bs-btn-hover-bg: #{darken($primary-shade, 10%)};
+
   .btn-secondary {
     --bs-btn-bg: transparent;
     --bs-btn-color: #{$link-color};
@@ -76,12 +67,14 @@ $input-btn-padding-y: 0.5rem !default;
     --bs-btn-hover-color: #{$quaternary-shade};
     --bs-btn-hover-bg: #{$link-color};
     --bs-btn-hover-border-color: #{$link-color};
+
     &:hover {
       a {
         color: #{$quaternary-shade};
         text-decoration: none;
       }
     }
+
     /* a {
        --bs-btn-color: #{$link-color};
        --bs-btn-bg: transparent;
@@ -92,6 +85,7 @@ $input-btn-padding-y: 0.5rem !default;
      }*/
     a {
       text-decoration: none;
+
       &:hover {
         color: #{$quaternary-shade};
         text-decoration: none;
@@ -101,13 +95,14 @@ $input-btn-padding-y: 0.5rem !default;
 
   }
 }
+
 /*
 color: #3D3D66;
 border: 1px 3D366 solid; background-color: transparent; (everything else remains the same as the primary button style)
  */
 /* header nav overrides */
-$navbar-dark-bg-active-color                 : $quaternary-shade !default;
-$navbar-dark-hover-color                     : $primary-shade !default;
+$navbar-dark-bg-active-color: $quaternary-shade !default;
+$navbar-dark-hover-color: $primary-shade !default;
 $navbar-padding-y: 0;
 
 
