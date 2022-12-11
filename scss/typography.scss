@@ -46,3 +46,20 @@ $nav-link-font-weight: $font-weight-medium;
   font-family: $font-family-serif;
   font-size: $font-size-base * 1.5;
 }
+.view-content {
+  h2 {
+    font-size: $h2-font-size * 0.7;
+  }
+  h3 {
+    font-size: $h3-font-size * 0.7;
+  }
+  h4 {
+    font-size: $h4-font-size * 0.7;
+  }
+  h5 {
+    font-size: $h5-font-size * 0.7;
+  }
+  h6 {
+    font-size: $h6-font-size * 0.7;
+  }
+}

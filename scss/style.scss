@@ -233,6 +233,11 @@ border: 0;
 
 */
 :root {
+  .block-facets-summary {
+    ul {
+      padding-left:0;
+    }
+  }
   .form-row {
     display:flex;
   }
@@ -258,7 +263,8 @@ border: 0;
           margin-bottom: map-get($spacers, 5);
           border-bottom-width: var(--bs-border-width);
           border-bottom-style: solid;
-          border-bottom-color: $accent-shade; /* instead of #979797 which is never used somewhere else */
+          /* Barnard exception not used everwhere else */
+          border-bottom-color: #979797;
           padding-bottom: map-get($spacers, 4);
         }
       }

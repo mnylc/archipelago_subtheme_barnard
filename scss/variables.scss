@@ -6,9 +6,9 @@ $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
 $accent-shade: #3d3d66;
 $accent-light: lighten($accent-shade, 37%);
-$accent-dark: #54548C; //darken($accent-shade, 12%);
+$accent-dark: #54548c; //darken($accent-shade, 12%);
 $tertiary-shade: #363644;
-$quaternary-shade: #F5F2E5;
+$quaternary-shade: #f5f2e5;
 // Reassign color vars to semantic color scheme
 $red: #dc3545;
 $yellow: #ffc107;
@@ -57,10 +57,55 @@ $border-radius: .25rem !default;
 $input-btn-padding-y: 0.5rem !default;
 
 :root {
-  --bs-btn-hover-bg: #{darken($primary-shade, 10%)};
-}
+  .alert-success {
+    --bs-alert-bg: #d4edda;
+  }
+  .alert-warning {
+    --bs-warning-bg: #ede4d4;
+  }
+  .alert-error {
+    --bs-error-bg: #edd4d4;
+  }
 
-// header nav overrides
+  --bs-btn-hover-bg: #{darken($primary-shade, 10%)};
+  .btn-secondary {
+    --bs-btn-bg: transparent;
+    --bs-btn-color: #{$link-color};
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #{$link-color};
+    --bs-btn-hover-color: #{$quaternary-shade};
+    --bs-btn-hover-bg: #{$link-color};
+    --bs-btn-hover-border-color: #{$link-color};
+    &:hover {
+      a {
+        color: #{$quaternary-shade};
+        text-decoration: none;
+      }
+    }
+    /* a {
+       --bs-btn-color: #{$link-color};
+       --bs-btn-bg: transparent;
+       --bs-btn-border-color: #{$link-color};
+       --bs-btn-hover-color: #{$quaternary-shade};
+       --bs-btn-hover-bg: #{$link-color};
+       --bs-btn-hover-border-color: #{$link-color};
+     }*/
+    a {
+      text-decoration: none;
+      &:hover {
+        color: #{$quaternary-shade};
+        text-decoration: none;
+      }
+
+    }
+
+  }
+}
+/*
+color: #3D3D66;
+border: 1px 3D366 solid; background-color: transparent; (everything else remains the same as the primary button style)
+ */
+/* header nav overrides */
 $navbar-dark-bg-active-color                 : $quaternary-shade !default;
 $navbar-dark-hover-color                     : $primary-shade !default;
 $navbar-padding-y: 0;
