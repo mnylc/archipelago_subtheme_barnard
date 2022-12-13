@@ -51,8 +51,9 @@ $breadcrumb-divider: quote(">");
 
 // Headings means H1-H6
 $headings-color: $gray-800;
+$btn-white-space: nowrap;
 
-// Buttons
+  // Buttons
 $border-radius: .25rem !default;
 $input-btn-padding-y: 0.5rem !default;
 
@@ -63,12 +64,14 @@ $input-btn-padding-y: 0.5rem !default;
     --bs-btn-bg: transparent;
     --bs-btn-color: #{$link-color};
     --bs-btn-bg: transparent;
+    --bs-btn-active-color: #{$link-color};
+    --bs-btn-active-bg: transparent;
     --bs-btn-border-color: #{$link-color};
     --bs-btn-hover-color: #{$quaternary-shade};
     --bs-btn-hover-bg: #{$link-color};
     --bs-btn-hover-border-color: #{$link-color};
-
     &:hover {
+      --bs-btn-active-bg: #{$link-color};
       a {
         color: #{$quaternary-shade};
         text-decoration: none;

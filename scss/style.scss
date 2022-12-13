@@ -269,6 +269,24 @@ border: 0;
   }
   .archipelago-barnard-theme:not(.path-frontpage) {
     #page {
+      /* Hides Labels from Exposed View Elements in the header
+      So they don't take DOM space shifting things even if they are
+      visible hidden;
+      */
+      #header .views-exposed-form label {
+        display: none;
+      }
+      .views-exposed-form {
+        .form-row {
+          .mb-3 {
+            margin-bottom: 0 !important;
+          }
+        }
+      .form-actions.mb-3 {
+        margin-bottom: 0 !important;
+        }
+      }
+      /* The Mobile Navbar toggler */
       .navbar-toggler {
         border-color: var(--bs-primary);
         .navbar-toggler-icon {
