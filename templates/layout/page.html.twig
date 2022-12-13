@@ -100,9 +100,10 @@
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
           <div class="{{ container }}">
-            <div class="row justify-content-center">
-              <div class="align-content-center align-items-center col-lg-10 col-xl-10 col-xxl-10 col-md-12 col-sm-12 flex-nowrap m-3">
-                {% endif %}
+            <div class="container-fluid">
+              <div class="row g-0 justify-content-center">
+                <div class="align-content-center align-items-center col-lg-10 col-xl-10 col-xxl-10 col-md-12 col-sm-12 flex-nowrap my-3">
+          {% endif %}
                 {{ page.header }}
                 {% if page.primary_menu or page.header_form %}
                   <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -127,7 +128,8 @@
                 {% if sidebar_collapse %}
                   <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
                 {% endif %}
-                {% if container_navbar %}
+          {% if container_navbar %}
+                </div>
               </div>
             </div>
           </div>
