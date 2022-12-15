@@ -376,6 +376,11 @@ border: 0;
 
   .archipelago-barnard-theme {
     --bs-nav-pills-link-active-bg: var(--bs-primary);
+    .facet-summary-item--count {
+      display:inline-block;
+      font-family: $font-family-serif;
+      font-size: $h4-font-size;
+    }
     .sidebar .block {
       border-style: none;
       padding: 0 0 1rem 0;

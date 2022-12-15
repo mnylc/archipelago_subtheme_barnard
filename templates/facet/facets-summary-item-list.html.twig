@@ -31,8 +31,12 @@
   {%- if items -%}
     <{{ list_type }}{{ attributes }}>
       {%- for item in items -%}
-        {#   item|json_encode|raw #}
-        <li{{ item.attributes.addClass('btn','btn-secondary')}}>{{ item.value }}</li>
+        {%- if item.value['#theme'] is defined and item.value['#theme'] == 'facets_summary_count' -%}
+          <li{{ item.attributes.addClass('facet-summary-item--count')}}>
+        {%- else -%}
+        <li{{ item.attributes.addClass('btn','btn-secondary')}}>
+        {%- endif -%}
+        {{ item.value }}</li>
       {%- endfor -%}
     </{{ list_type }}>
   {%- else -%}
