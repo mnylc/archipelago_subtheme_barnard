@@ -171,6 +171,17 @@ a {
   .navbar-toggler {
     font-size: 0.75em;
   }
+  #navbar-main {
+    .nav-item--advanced-searchh {
+      display:none;
+    }
+  }
+  #navbar-top {
+    .nav-link--advanced-search {
+      display:block;
+    }
+  }
+
 
 }
 
@@ -189,6 +200,12 @@ a {
 
 /* Barnard overrides all sizes except small */
 @include media-breakpoint-up(md) {
+  /* Hides any top navbar link pointing to advanced-search */
+  #navbar-top {
+     .nav-link--advanced-search {
+       display:none;
+    }
+  }
   .nav-item.menu-item--expanded.dropdown {
     z-index: 9999;
   }
