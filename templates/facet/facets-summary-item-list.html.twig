@@ -32,9 +32,9 @@
     <{{ list_type }}{{ attributes }}>
       {%- for item in items -%}
         {%- if item.value['#theme'] is defined and item.value['#theme'] == 'facets_summary_count' -%}
-          <li{{ item.attributes.addClass('facet-summary-item--count')}}>
+          <li{{ item.attributes.addClass('facet-summary-item--count','me-1')}}>
         {%- else -%}
-        <li{{ item.attributes.addClass('btn','btn-secondary')}}>
+        <li{{ item.attributes.addClass('btn','btn-secondary','me-1')}}>
         {%- endif -%}
         {{ item.value }}</li>
       {%- endfor -%}
