@@ -151,25 +151,38 @@ a {
   }
 }
 
+
+
+
+/* Barnard overrides down from md  */
 @include media-breakpoint-down(md) {
   .navbar-brand {
     font-size: $navbar-brand-font-size-mobile;
-  }
-  #navbar-top {
-    padding: 0 0.5rem;
-    min-height: 67px;
+    /* overrides Bootstrap '.row > *' */
+    padding-left: calc(var(--bs-gutter-x) * 0.125);
+    padding-right: calc(var(--bs-gutter-x) * 0.125);
   }
   .navbar-toggler {
     font-size: 0.75em;
+  }
+
+}
+
+/* Barnard overrides down from lg  */
+@include media-breakpoint-between(md,lg) {
+  .navbar-brand {
+    font-size: $navbar-brand-font-size-md;
+  }
+}
+/* Barnard overrides from lg up */
+@include media-breakpoint-up(lg) {
+  .navbar-brand {
+    font-size: $navbar-brand-font-size;
   }
 }
 
 /* Barnard overrides all sizes except small */
 @include media-breakpoint-up(md) {
-
-  .navbar-brand {
-    font-size: $navbar-brand-font-size;
-  }
   .nav-item.menu-item--expanded.dropdown {
     z-index: 9999;
   }
@@ -268,6 +281,11 @@ border: 0;
     --bs-gutter-y: 0;
   }
   .archipelago-barnard-theme:not(.path-frontpage) {
+    #navbar-top {
+      padding: 0 0.5rem;
+      min-height: 67px;
+    }
+
     #page {
       /* Hides Labels from Exposed View Elements in the header
       So they don't take DOM space shifting things even if they are
