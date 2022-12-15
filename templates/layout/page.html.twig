@@ -81,7 +81,7 @@
         {% if page.secondary_menu or page.top_header or page.top_header_form %}
           <nav{{ navbar_top_attributes.addClass(['navbar-expand-lg']) }}>
             {% if container_navbar %}
-            <div class="{{ container }}">
+            <div class="{{ container }} flex-nowrap">
               {% endif %}
               {{ page.top_header }}
               <button class="navbar-toggler collapsed ml-auto" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbarTop" aria-controls="CollapsingNavbarTop" aria-expanded="false" aria-label="Toggle Top navigation"><span class="navbar-toggler-icon"></span></button>
@@ -99,7 +99,7 @@
         {% endif %}
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
-          <div class="{{ container }}">
+          <div class="{{ container }} flex-nowrap">
             <div class="container-fluid">
               <div class="row g-0 justify-content-center">
                 <div class="align-content-center align-items-center col-lg-10 col-xl-10 col-xxl-10 col-md-12 col-sm-12 flex-nowrap my-3">
