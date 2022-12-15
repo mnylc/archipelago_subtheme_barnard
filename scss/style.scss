@@ -162,6 +162,12 @@ a {
     padding-left: calc(var(--bs-gutter-x) * 0.125);
     padding-right: calc(var(--bs-gutter-x) * 0.125);
   }
+  #navbar-main {
+    .container-fluid {
+      padding-left: calc(var(--bs-gutter-x) * 0.20835);
+      padding-right: calc(var(--bs-gutter-x) * 0.20835);
+    }
+  }
   .navbar-toggler {
     font-size: 0.75em;
   }
