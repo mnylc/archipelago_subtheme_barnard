@@ -39,6 +39,17 @@ $nav-link-font-weight: $font-weight-medium;
   font-family: $font-family-serif;
 }
 
+dt {
+  font-family: $font-family-serif;
+  font-style: italic;
+
+}
+.content {
+  dt {
+    font-weight: $font-weight-normal;
+  }
+}
+
 .blockquote-footer {
   margin-top: -0.5rem !important;
 }

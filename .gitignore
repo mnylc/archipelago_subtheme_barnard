@@ -8,3 +8,5 @@ node_modules/*
 .idea/modules.xml
 .idea/codeStyles/codeStyleConfig.xml
 .idea/archipelago_subtheme_barnard.iml
+.idea/php.xml
+b4.gulpfile.js
