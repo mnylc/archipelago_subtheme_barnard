@@ -54,10 +54,10 @@
     {#  Title suffix is used to add the contextual link. This way it does not get in the way of the accordion! #}
     {{ title_suffix }}
     <div class="accordion-header" id="{{attributes.id ~ '-heading'}}">
-      <button class="accordion-button{{ collapsed_button_class }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{attributes.id ~ '-body'}}" aria-expanded="true" aria-controls=""{{attributes.id ~ '-heading'}}"">
+      <button class="accordion-button{{ collapsed_button_class }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{attributes.id ~ '-body'}}" aria-expanded="true" aria-controls="{{attributes.id ~ '-heading'}}">
       {{ title_prefix }}
       {% if label %}
-      <h2 {{ title_attributes }}>{{ label }}</h2>
+      <span{{ title_attributes }}>{{ label }}</span>
       {% endif %}
       </button>
     </div>
