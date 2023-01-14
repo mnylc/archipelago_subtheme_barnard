@@ -200,8 +200,8 @@ a {
 @include media-breakpoint-up(md) {
   /* Hides any top navbar link pointing to advanced-search */
   #navbar-top {
-     .nav-link--advanced-search {
-       display:none;
+    .nav-link--advanced-search {
+      display:none;
     }
   }
   .nav-item.menu-item--expanded.dropdown {
@@ -290,10 +290,12 @@ border: 0;
   }
   /*Facet summary */
   .block-facets-summary {
+    display:inline-flex;
     ul.facet-summary {
       padding-left:0;
-      margin-top: 1.5rem;
-      display:flex;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      display:inline-flex;
       align-items: center;
     }
   }
@@ -310,9 +312,13 @@ border: 0;
       border-top: 0 none;
       border-left: 0 none;
       border-right: 0 none;
-      border-bottom: var(--bs-accordion-border-width) solid var(--bs-gray-dark)
+      border-bottom: var(--bs-accordion-border-width) solid var(--bs-gray-dark);
+      .accordion-button {
+        span {
+          @extend h2;
+        }
+      }
     }
-
   }
 
 
@@ -342,12 +348,12 @@ border: 0;
           .mb-3 {
             margin-bottom: 0 !important;
           }
-        div:first-child {
-          padding-left: 0 !important;
+          div:first-child {
+            padding-left: 0 !important;
           }
         }
-      .form-actions.mb-3 {
-        margin-bottom: 0 !important;
+        .form-actions.mb-3 {
+          margin-bottom: 0 !important;
         }
       }
       /* The Mobile Navbar toggler */
@@ -431,6 +437,71 @@ border: 0;
       --bs-pagination-active-border-color: var(--bs-secondary);
       --bs-pagination-active-color: var(--bs-body-bg);
     }
+    /* Exposed form overrides based on bef */
+    .views-exposed-form.bef-exposed-form {
+      .form-row {
+        /* Absolutely no idea why but this, by resetting flex
+        Allows all to be aligned
+        */
+        //display:block;
+      }
+      label {
+        @extend .visually-hidden;
+      }
+      display: inline-flex;
+      flex-basis: content;
+      .form-item-sort-bef-combine {
+        .form-select.bef-links  {
+          padding: 0;
+          background:none;
+          border:none;
+        }
+        ul {
+          display:inline-flex;
+          align-items: center;
+          list-style: none;
+          margin-bottom: 0;
+          margin-top: 0;
+          li {
+            display: flex;
+            flex-wrap: nowrap;
+            a {
+              border: 1px solid var(--bs-primary) ;
+            }
+          }
+          li:first-child {
+            a {
+              border-bottom-left-radius: var(--bs-border-radius);;
+              border-top-left-radius: var(--bs-border-radius);
+            }
+          }
+          li:last-child {
+            a {
+              border-bottom-right-radius: var(--bs-border-radius);
+              border-top-right-radius: var(--bs-border-radius);
+            }
+          }
+          .bef-link.bef-link--selected {
+            background-color: var(--bs-primary);
+            color: var(--bs-body-bg);
+          }
+          .bef-link {
+            padding-top: $btn-padding-y;
+            padding-bottom: $btn-padding-y;
+            padding-left: $btn-padding-x;
+            padding-right: $btn-padding-x;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          .bef-link:not(.bef-link--selected) {
+            color: var(--bs-primary);
+          }
+        }
+
+      }
+    }
+
   }
 }
 
