@@ -9,8 +9,7 @@
 
   Drupal.behaviors.archipelago_subtheme_barnard = {
     attach: function(context, settings) {
-
-      // Custom code here
+      $(".view-header .views-display-link").detach().appendTo("#main-breadcrumbs");
 
     }
   };
