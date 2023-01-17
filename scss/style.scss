@@ -347,14 +347,14 @@ border: 0;
       display: flex;
       .views-exposed-form {
         order:3;
-        flex-grow: 2;
+        flex-grow: 0;
         flex-direction: row-reverse;
       }
       .views-display-link {
         display: flex;
         flex-flow: row-reverse;
         order: 2;
-        flex-grow: 4;
+        margin-left:auto;
       }
     }
 
