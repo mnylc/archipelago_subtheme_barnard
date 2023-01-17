@@ -326,9 +326,14 @@ border: 0;
   .form-row {
     display:flex;
   }
-  .archipelago-barnard-theme.path-frontpage .row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
+  .archipelago-barnard-theme.path-frontpage {
+    .view-exposed-form {
+      margin-top: 1rem;
+    }
+    .row {
+      --bs-gutter-x: 0;
+      --bs-gutter-y: 0;
+    }
   }
   .archipelago-barnard-theme:not(.path-frontpage) {
     #navbar-top {
