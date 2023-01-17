@@ -179,6 +179,9 @@ a {
       display:block;
     }
   }
+  .block-facets-summary {
+    flex-basis: 100%;
+  }
 
 
 }
@@ -203,6 +206,9 @@ a {
     .nav-link--advanced-search {
       display:none;
     }
+  }
+  .block-facets-summary {
+    flex-basis: 60%;
   }
 
   .nav-item.menu-item--expanded.dropdown {
@@ -291,12 +297,12 @@ border: 0;
   }
   /*Facet summary */
   .block-facets-summary {
-    display:inline-flex;
     ul.facet-summary {
       padding-left:0;
       margin-top: 0rem;
       margin-bottom: 0rem;
-      display:inline-flex;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
     }
   }
@@ -348,27 +354,29 @@ border: 0;
       .views-exposed-form {
         order:3;
         flex-grow: 0;
+        flex-shrink: 0;
         flex-direction: row-reverse;
       }
 
-      a.views-display-link:first-child {
-          border-bottom-left-radius: var(--bs-border-radius);;
+      a.views-display-link {
+        &:first-of-type {
+          border-bottom-left-radius: var(--bs-border-radius);
           border-top-left-radius: var(--bs-border-radius);
-      }
-      a.views-display-link:last-child {
-
+          margin-left: auto;
+        }
+        &:last-of-type {
           border-bottom-right-radius: var(--bs-border-radius);
           border-top-right-radius: var(--bs-border-radius);
-      }
-
-      a.views-display-link {
+          margin-left: 0;
+        }
+        flex-shrink: 0;
         border: 1px solid var(--bs-primary);
         height: 100%;
         min-height: 0;
         display: flex;
         flex-flow: row-reverse;
         order: 2;
-        margin-left:auto;
+        margin-left: 0;
         padding-top: $btn-padding-y;
         padding-bottom: $btn-padding-y;
         padding-left: $btn-padding-x;
@@ -377,7 +385,11 @@ border: 0;
           text-decoration: none;
         }
       }
+      .is-active {
+        background-color: var(--bs-primary);
+      }
     }
+
 
     #page {
       /* Hides Labels from Exposed View Elements in the header
@@ -508,6 +520,7 @@ border: 0;
           list-style: none;
           margin-bottom: 0;
           margin-top: 0;
+          padding-left: 0.25rem;
           li {
             display: flex;
             flex-wrap: nowrap;
