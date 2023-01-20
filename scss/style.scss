@@ -81,6 +81,11 @@ a {
 }
 
 @include media-breakpoint-up(xs) {
+  #content.main-content {
+    .block-facets-summary, .views-element-container {
+      margin-left: auto;
+    }
+  }
   /* Barnard Front Page Panel Menu Under search Box */
   .toolbar-fixed {
     .ui-front {
@@ -328,29 +333,42 @@ border: 0;
     }
   }
 
-
   .form-row {
     display:flex;
   }
+
+  /* Front Page exception */
   .archipelago-barnard-theme.path-frontpage {
-    .view-exposed-form {
-      margin-top: 1rem;
+    .frontpage-panel {
+      .views-exposed-form {
+        margin-top: 1.5rem;
+      }
     }
     .row {
       --bs-gutter-x: 0;
       --bs-gutter-y: 0;
     }
   }
+  /* Rest of the pages Page exception */
   .archipelago-barnard-theme:not(.path-frontpage) {
     #navbar-top {
       padding: 0 0.5rem;
       min-height: 67px;
     }
+    /* offset for views/blocks/facet summaries on NODE pages*/
+    #content.main-content {
+      .block-facets-summary, .views-element-container {
+        margin-left: map-get($spacers, 3) * 4;
+      }
+    }
     #main-breadcrumbs {
       margin-top: 2.5rem;
       margin-bottom: 2.5rem;
-      min-height: 4.5rem;
+      min-height: 0;
       display: flex;
+      .form-item-sort-bef-combine {
+        @extend .btn-sm;
+      }
       .views-exposed-form {
         order:3;
         flex-grow: 0;
@@ -359,6 +377,8 @@ border: 0;
       }
 
       a.views-display-link {
+        @extend .btn-sm;
+        max-height: 2.7rem;
         &:first-of-type {
           border-bottom-left-radius: var(--bs-border-radius);
           border-top-left-radius: var(--bs-border-radius);
@@ -369,6 +389,53 @@ border: 0;
           border-top-right-radius: var(--bs-border-radius);
           margin-left: 0;
         }
+        &.views-display-link-grid {
+          color:transparent;
+          max-width: 3rem;
+          overflow: hidden;
+        }
+        &.views-display-link-page_1 {
+          color:transparent;
+          max-width: 3rem;
+          overflow: hidden;
+        }
+
+        &.views-display-link-grid::before {
+          color: var(--bs-body-color);
+          content: "\F3FC";
+          display: inline-block;
+          font-family: bootstrap-icons !important;
+          font-style: normal;
+          font-weight: normal !important;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          vertical-align: -.125em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        &.views-display-link-page_1::before {
+          color: var(--bs-body-color);
+          content: "\F478";
+          display: inline-block;
+          font-family: bootstrap-icons !important;
+          font-style: normal;
+          font-weight: normal !important;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          vertical-align: -.125em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        &.views-display-link-grid {
+        }
+
+        &.views-display-link-page_1 {
+        }
+
         flex-shrink: 0;
         border: 1px solid var(--bs-primary);
         height: 100%;
@@ -377,19 +444,18 @@ border: 0;
         flex-flow: row-reverse;
         order: 2;
         margin-left: 0;
-        padding-top: $btn-padding-y;
-        padding-bottom: $btn-padding-y;
-        padding-left: $btn-padding-x;
-        padding-right: $btn-padding-x;
+        padding-top: var(--bs-btn-padding-y);
+        padding-bottom: var(--bs-btn-padding-y);
+        padding-left: var(--bs-btn-padding-x);
+        padding-right: var(--bs-btn-padding-x);
         &:hover {
           text-decoration: none;
         }
-      }
-      .is-active {
-        background-color: var(--bs-primary);
+        &.is-active {
+          background-color: var(--bs-primary);
+        }
       }
     }
-
 
     #page {
       /* Hides Labels from Exposed View Elements in the header
@@ -503,64 +569,81 @@ border: 0;
         */
         //display:block;
       }
+
       label {
         @extend .visually-hidden;
       }
+
       display: inline-flex;
       flex-basis: content;
+
       .form-item-sort-bef-combine {
-        .form-select.bef-links  {
+        .form-select.bef-links {
           padding: 0;
-          background:none;
-          border:none;
+          background: none;
+          border: none;
         }
+
         ul {
-          display:inline-flex;
+          display: inline-flex;
           align-items: center;
           list-style: none;
           margin-bottom: 0;
           margin-top: 0;
           padding-left: 0.25rem;
+
           li {
             display: flex;
             flex-wrap: nowrap;
+
             a {
-              border: 1px solid var(--bs-primary) ;
+              border: 1px solid var(--bs-primary);
+              color: var(--bs-body-color);
             }
           }
+
           li:first-child {
             a {
-              border-bottom-left-radius: var(--bs-border-radius);;
+              border-bottom-left-radius: var(--bs-border-radius);
               border-top-left-radius: var(--bs-border-radius);
             }
           }
+
           li:last-child {
             a {
               border-bottom-right-radius: var(--bs-border-radius);
               border-top-right-radius: var(--bs-border-radius);
             }
           }
+
           .bef-link.bef-link--selected {
             background-color: var(--bs-primary);
-            color: var(--bs-body-bg);
           }
+
           .bef-link {
-            padding-top: $btn-padding-y;
-            padding-bottom: $btn-padding-y;
-            padding-left: $btn-padding-x;
-            padding-right: $btn-padding-x;
+            --bs-btn-padding-y: 0.25rem;
+            --bs-btn-padding-x: 0.5rem;
+            --bs-btn-font-size: 0.875rem;
+            --bs-btn-border-radius: 0.25rem;
+            padding-top: var(--bs-btn-padding-y);
+            padding-bottom: var(--bs-btn-padding-y);
+            padding-left: var(--bs-btn-padding-x);
+            padding-right: var(--bs-btn-padding-x);
             &:hover {
               text-decoration: none;
             }
           }
+
           .bef-link:not(.bef-link--selected) {
-            color: var(--bs-primary);
+            text-decoration: none;
           }
         }
 
+        .bef-link:not(.bef-link--selected) {
+        }
       }
     }
-
   }
 }
+
 
