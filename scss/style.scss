@@ -402,6 +402,9 @@ border: 0;
 
         &.views-display-link-grid::before {
           color: var(--bs-body-color);
+          position: relative;
+          left: -0.5rem;
+          top: 0.25rem;
           content: "\F3FC";
           display: inline-block;
           font-family: bootstrap-icons !important;
@@ -417,6 +420,9 @@ border: 0;
 
         &.views-display-link-page_1::before {
           color: var(--bs-body-color);
+          position: relative;
+          left: -0.5rem;
+          top: 0.25rem;
           content: "\F478";
           display: inline-block;
           font-family: bootstrap-icons !important;
