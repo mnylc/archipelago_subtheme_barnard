@@ -123,6 +123,9 @@ a {
         &:active {
           color: $navbar-dark-bg-active-color;
         }
+        &.active {
+          color: $navbar-dark-bg-active-color;
+        }
       }
     }
     #frontpage-menu-main {
