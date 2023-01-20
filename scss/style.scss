@@ -260,9 +260,15 @@ a {
   .nav-item {
     .nav-link {
       color: $navbar-dark-bg-active-color;
-    }
-    .nav-link:hover {
-      color: $navbar-dark-hover-color;
+      &:active {
+        color: $navbar-dark-hover-color;
+      }
+      &.active {
+        color: $navbar-dark-hover-color;
+      }
+      &:hover {
+        color: $navbar-dark-hover-color;
+      }
     }
   }
 }
