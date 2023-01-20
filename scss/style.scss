@@ -370,8 +370,14 @@ border: 0;
         margin-left: map-get($spacers, 3) * 4;
       }
     }
+
+    .highlighted {
+      padding-top:1.875rem;
+    }
+
+
     #main-breadcrumbs {
-      margin-top: 2.5rem;
+      margin-top: 1.875rem;
       margin-bottom: 2.5rem;
       min-height: 0;
       display: flex;
