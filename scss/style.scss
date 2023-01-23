@@ -489,7 +489,20 @@ border: 0;
         display: none;
       }
       .views-exposed-form {
+        fieldset {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-self:stretch;
+        }
+        .fieldset-wrapper {
+          display:flex;
+        }
+
         .form-row {
+          button:not(.form-submit) {
+            align-self: self-start;
+          }
           .mb-3 {
             margin-bottom: 0 !important;
           }
@@ -584,14 +597,21 @@ border: 0;
       --bs-pagination-active-border-color: var(--bs-secondary);
       --bs-pagination-active-color: var(--bs-body-bg);
     }
+
+
+    /* special class added via the UI for the advanced search */
+    .advanced-search-box {
+      .views-exposed-form {
+        .form-row {
+          flex-flow: column;
+        }
+      }
+    }
+
+
+
     /* Exposed form overrides based on bef */
     .views-exposed-form.bef-exposed-form {
-      .form-row {
-        /* Absolutely no idea why but this, by resetting flex
-        Allows all to be aligned
-        */
-        //display:block;
-      }
 
       label {
         @extend .visually-hidden;
