@@ -509,6 +509,16 @@ border: 0;
           margin-top: 1rem;
         }
       }
+
+      #sidebar-first {
+        .views-exposed-form {
+          .form-actions {
+            display: flex;
+            column-gap: 0.5rem;
+          }
+        }
+      }
+
       /* TODO make it only for advanced-search-box */
       .views-exposed-form {
         fieldset {
