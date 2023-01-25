@@ -190,7 +190,14 @@ a {
   .block-facets-summary {
     flex-basis: 100%;
   }
-
+  .pagination {
+    flex-wrap:wrap;
+  }
+  #frontpage-link {
+    a.btn-primary {
+      white-space: pre-wrap !important;
+    }
+  }
 
 }
 
@@ -572,6 +579,7 @@ border: 0;
     .sidebar .block {
       border-style: none;
       padding: 0 0 1rem 0;
+      margin: 0;
     }
     .accordion {
       --bs-accordion-active-bg: #{$white};
