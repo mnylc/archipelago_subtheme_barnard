@@ -189,10 +189,17 @@ a {
   }
   .block-facets-summary {
     flex-basis: 100%;
+    padding-bottom: 1rem;
   }
+
+  #main-breadcrumbs {
+    flex-wrap: wrap;
+  }
+
   .pagination {
     flex-wrap:wrap;
   }
+
   #frontpage-link {
     a.btn-primary {
       white-space: pre-wrap !important;
