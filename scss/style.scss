@@ -509,8 +509,7 @@ border: 0;
           margin-top: 1rem;
         }
       }
-      /* TODO make it only advanced-search-box */
-
+      /* TODO make it only for advanced-search-box */
       .views-exposed-form {
         fieldset {
           display: flex;
@@ -523,6 +522,9 @@ border: 0;
           align-items: end;
           column-gap: 1rem;
           flex-basis: 100%;
+          .form-type-textfield {
+            flex-grow: 1;
+          }
         }
 
         .form-row {
@@ -540,7 +542,6 @@ border: 0;
           margin-bottom: 0 !important;
         }
       }
-
 
       /* The Mobile Navbar toggler */
       .navbar-toggler {
@@ -626,7 +627,6 @@ border: 0;
       --bs-pagination-active-color: var(--bs-body-bg);
     }
 
-
     /* special class added via the UI for the advanced search */
     .advanced-search-box {
       .views-exposed-form {
@@ -635,8 +635,6 @@ border: 0;
         }
       }
     }
-
-
 
     /* Exposed form overrides based on bef */
     .views-exposed-form.bef-exposed-form {
