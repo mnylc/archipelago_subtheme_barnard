@@ -561,6 +561,7 @@ border: 0;
   .archipelago-barnard-theme {
     .navbar-dark {
       --bs-navbar-brand-color: #{$quaternary-shade};
+      --bs-navbar-brand-hover-color: #{$quaternary-shade};
     }
 
     dt {
