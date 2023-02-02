@@ -673,17 +673,18 @@ border: 0;
     }
 
     /* special class added via the UI for the advanced search */
-    .advanced-search-box {
-      .views-exposed-form {
-        .form-row {
-          flex-flow: column;
-          fieldset {
-            flex-direction: column;
-          }
-
-          .fieldset-wrapper {
-            label {
-              @extend .visually-hidden;
+    #page {
+      .advanced-search-box {
+        .views-exposed-form {
+          .form-row {
+            flex-flow: column;
+            fieldset {
+              flex-direction: column !important;
+            }
+            .fieldset-wrapper {
+              label {
+                @extend .visually-hidden;
+              }
             }
           }
         }
