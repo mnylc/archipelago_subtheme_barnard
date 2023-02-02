@@ -231,6 +231,15 @@ a {
   }
   .block-facets-summary {
     flex-basis: 60%;
+    &:only-child {
+      flex-basis: 100%;
+    }
+  }
+
+  #main-breadcrumbs {
+    div:only-of-type {
+      flex-basis: 100%;
+    }
   }
 
   .nav-item.menu-item--expanded.dropdown {
