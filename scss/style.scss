@@ -548,6 +548,9 @@ border: 0;
           flex-direction: row;
           justify-content: space-between;
           align-self:stretch;
+          legend {
+            display: flex;
+          }
         }
         .fieldset-wrapper {
           display:flex;
