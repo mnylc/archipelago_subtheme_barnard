@@ -677,8 +677,10 @@ border: 0;
       .advanced-search-box {
         .views-exposed-form {
           .form-row {
+            min-height: 0;
             flex-flow: column;
             fieldset {
+              min-height: 0;
               flex-direction: column !important;
             }
             .fieldset-wrapper {
