@@ -34,3 +34,14 @@ function archipelago_subtheme_barnard_form_system_theme_settings_alter(&$form, F
     'bg-transparent' => t('Transparent'),
   );
 }
+
+/**
+ * Prepares variables for `breadcrumb.html.twig`.
+ */
+function archipelago_subtheme_barnard_preprocess_breadcrumb(&$variables){
+
+  // Remove 'Home' from breadcrumb trail.
+  if (count($variables['breadcrumb'])) {
+    array_shift($variables['breadcrumb']);
+  }
+}
