@@ -541,6 +541,9 @@ border: 0;
         }
       }
 
+
+
+
       /* TODO make it only for advanced-search-box */
       .views-exposed-form {
         fieldset {
@@ -674,6 +677,10 @@ border: 0;
       .views-exposed-form {
         .form-row {
           flex-flow: column;
+          fieldset {
+            flex-direction: column;
+          }
+
           .fieldset-wrapper {
             label {
               @extend .visually-hidden;
