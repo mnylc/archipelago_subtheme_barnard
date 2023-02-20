@@ -277,6 +277,11 @@ a {
       //@include make-col(10, 12);
     }
   }
+  .row.region-breadcrumb-with-sidebar {
+    flex-wrap: nowrap;
+  }
+
+
 }
 /* Barnard Navbar Top override Menu Links */
 #navbar-top .navbar-nav {
