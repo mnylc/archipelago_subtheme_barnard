@@ -41,6 +41,8 @@
  * - page.primary_menu: Items for the primary menu region.
  * - page.secondary_menu: Items for the secondary menu region.
  * - page.featured_top: Items for the featured top region.
+ * - page.content_top: Content 10 Columns width
+ * - page.breadcrumb_with_sidebar: Breadcrumb area over the main content with sidebar
  * - page.content: The main content of the current page.
  * - page.content_second: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
@@ -175,8 +177,12 @@
       {% block content %}
         <div id="main" class="{{ container }}">
           <div class="row row-offcanvas row-offcanvas-left clearfix">
+
             <main{{ content_attributes }}>
               <section class="section">
+                <div class="col">
+                  {{ page.breadcrumb_with_sidebar }}
+                </div>
                 <a id="main-content" tabindex="0"></a>
                 {{ page.content }}
               </section>

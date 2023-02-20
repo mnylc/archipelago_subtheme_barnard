@@ -22,8 +22,9 @@ regions:
   highlighted: Highlighted
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
-  content_top: Content 10 Columns width
-  content: Content with Sidebars
+  content_top: 'Content 10 Columns width'
+  breadcrumb_with_sidebar: 'Breadcrumb With Sidebars'
+  content: 'Content with Sidebars'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'
