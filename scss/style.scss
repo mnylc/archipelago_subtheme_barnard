@@ -282,11 +282,14 @@ a {
     .views-exposed-form {
       max-width: fit-content;
       margin-right: 0;
-      padding-right: 0 ;
+      padding-right: 0;
+      .js-form-item {
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
     }
   }
-
-
 }
 /* Barnard Navbar Top override Menu Links */
 #navbar-top .navbar-nav {
