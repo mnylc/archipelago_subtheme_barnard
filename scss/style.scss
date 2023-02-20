@@ -279,6 +279,11 @@ a {
   }
   .row.region-breadcrumb-with-sidebar {
     flex-wrap: nowrap;
+    .views-exposed-form {
+      max-width: fit-content;
+      margin-right: 0;
+      padding-right: 0 ;
+    }
   }
 
 
