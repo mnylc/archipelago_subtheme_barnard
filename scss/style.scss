@@ -335,10 +335,10 @@ border: 0;
     div.row {
       div.d-flex {
         background-color: map-get($theme-colors,"quaternary");
-        padding-left: 0.875rem;
-        padding-right: 0.875rem;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
+        margin-left: 0.875rem;
+        margin-right: 0.875rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
