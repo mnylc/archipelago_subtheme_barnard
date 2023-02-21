@@ -357,6 +357,11 @@ border: 0;
   }
   .sitewide-alert {
     text-align:center;
+    .close {
+      position: absolute;
+      right: 1rem;
+      margin-left: 1rem;
+    }
     &.alert {
       --bs-alert-margin-bottom: 0rem;
       --bs-alert-border-radius: 0;
@@ -368,6 +373,7 @@ border: 0;
     }
     p {
       margin-bottom: 0;
+      padding-right: 1.5rem;
     }
   }
 
