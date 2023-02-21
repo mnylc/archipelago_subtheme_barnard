@@ -42,6 +42,7 @@
  * - page.secondary_menu: Items for the secondary menu region.
  * - page.featured_top: Items for the featured top region.
  * - page.content_top: Content 10 Columns width
+ * - page. content_top_left: Content 10 Columns width aligned left
  * - page.breadcrumb_with_sidebar: Breadcrumb area over the main content with sidebar
  * - page.content: The main content of the current page.
  * - page.content_second: The main content of the current page.
@@ -171,13 +172,22 @@
             </div>
           </div>
         </div>
+        <div id="main-top-left" class="{{ container }}">
+          <div class="row justify-content-left">
+            <div class="{{ content_top_classes|join(" ") }}">
+              <section class="section">
+                <a id="main-content-left" tabindex="-1"></a>
+                {{ page.content_top_left }}
+              </section>
+            </div>
+          </div>
+        </div>
       {% endblock %}
     </div>
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" class="{{ container }}">
           <div class="row row-offcanvas row-offcanvas-left clearfix">
-
             <main{{ content_attributes }}>
               <section class="section">
                 <div class="col">

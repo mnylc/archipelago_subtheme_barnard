@@ -23,6 +23,7 @@ regions:
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
   content_top: 'Content 10 Columns width'
+  content_top_left: 'Content 10 Columns width aligned left'
   breadcrumb_with_sidebar: 'Breadcrumb With Sidebars'
   content: 'Content with Sidebars'
   sidebar_first: 'Sidebar first'

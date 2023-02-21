@@ -324,7 +324,26 @@ border: 0;
 
 */
 :root {
-  /* Alertw */
+
+  /* IA Bookreader */
+  #page .BookReader .BookReaderSearchHilite, #page .BRmobileMenu #page .BookReaderSearchHilite, #page .BRfloat .BookReaderSearchHilite {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    background-color: #FF00BC;
+  }
+  #views-bootstrap-collections-using-solr-search-browse-collections.grid {
+    div.row {
+      div.d-flex {
+        background-color: map-get($theme-colors,"quaternary");
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+    }
+  }
+
+  /* Alert */
   .alert-success {
     color: #{$link-color};
     background-color: #cdecd5;
@@ -335,6 +354,19 @@ border: 0;
     background-color: #e3eee6;
     border-color: transparent;
   }
+  .site-wide-alert {
+    text-align:center;
+    &.alert {
+      --bs-alert-margin-bottom: 0rem;
+      --bs-alert-border-radius: 0;
+    }
+    &.alert-info {
+      color: #{$gray-800};
+      background-color: #F4CAC9;
+      font-weight: 600;
+    }
+  }
+
   .alert-warning {
     color: #{$link-color};
     background-color: #e9d4af;
