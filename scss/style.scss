@@ -75,7 +75,7 @@ a {
 
 /* Barnard hide Form labels for exposed form Elements */
 .views-exposed-form {
-  div:not(.form-item-sort-bef-combine) label {
+  div:not(.form-item-sort-bef-combine) > label {
     @extend .invisible;
   }
 }
@@ -750,7 +750,7 @@ border: 0;
 
     /* Exposed form overrides based on bef */
     .views-exposed-form.bef-exposed-form {
-      div:not(.form-item-sort-bef-combine) label {
+      div:not(.form-item-sort-bef-combine) > label {
         @extend .visually-hidden;
       }
       display: flex;
