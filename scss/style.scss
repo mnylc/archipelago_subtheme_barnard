@@ -754,6 +754,14 @@ border: 0;
         @extend .visually-hidden;
       }
       display: flex;
+      // Sort using select box.
+      .form-type-select.form-item-sort-bef-combine {
+        select {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          border: 1px solid var(--bs-primary);
+        }
+      }
       .form-item-sort-bef-combine {
         .form-select.bef-links {
           padding: 0;
