@@ -75,7 +75,7 @@ a {
 
 /* Barnard hide Form labels for exposed form Elements */
 .views-exposed-form {
-  div:not(.form-item-sort-bef-combine) > label {
+  label {
     @extend .invisible;
   }
 }
@@ -578,7 +578,7 @@ border: 0;
       So they don't take DOM space shifting things even if they are
       visible hidden; Except Sort which in this case needs the label
       */
-      #header .views-exposed-form div:not(.form-item-sort-bef-combine) label {
+      #header .views-exposed-form label {
         display: none;
       }
 
@@ -751,7 +751,7 @@ border: 0;
 
     /* Exposed form overrides based on bef */
     .views-exposed-form.bef-exposed-form {
-      div:not(.form-item-sort-bef-combine) > label {
+      label {
         @extend .visually-hidden;
       }
       display: flex;
