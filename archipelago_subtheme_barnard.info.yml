@@ -10,6 +10,11 @@ libraries:
   - archipelago_subtheme_barnard/global-styling
 libraries-override:
   bootstrap_barrio/global-styling: false
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        misc/dialog/off-canvas/css/reset.css: false
+        misc/dialog/off-canvas/css/base.css: false
 regions:
   top_header: 'Top header'
   top_header_form: 'Top header form'
