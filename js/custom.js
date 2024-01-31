@@ -11,7 +11,8 @@
     attach: function (context, settings) {
       if ($(context).is('.view') || context == document) {
           $("#main-breadcrumbs").find('.views-display-link').remove();
-          $(context).once('view-header-barnard').find('.view-header .views-display-link').each(function () {
+          const elementsToAttach = once('view-header-barnard', '.view-header .views-display-link', context);
+          $(elementsToAttach).each(function (index, value) {
             $(this).detach().appendTo("#main-breadcrumbs");
         });
       }
