@@ -423,6 +423,16 @@ border: 0;
   .form-row {
     display:flex;
   }
+  .archipelago-barnard-theme .form-row > div,  .archipelago-barnard-theme .form-row > fieldset {
+    padding-right: .3125rem;
+    padding-left: .3125rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: auto;
+    max-width:none
+  }
 
   /* Front Page exception */
   .archipelago-barnard-theme.path-frontpage {
