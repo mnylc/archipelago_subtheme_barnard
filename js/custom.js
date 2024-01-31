@@ -12,7 +12,7 @@
       if ($(context).is('.view') || context == document) {
          const $narrowsearch_block = document.querySelector('#block-narrowyoursearch');
          if ($narrowsearch_block) {
-           const $facets = $narrowsearch_block.parentElement.querySelectorAll('.block-facets');
+           const $facets = $narrowsearch_block.parentElement.querySelectorAll('.block-facets:not(.hidden)');
            if ($facets.length > 0) {
              $narrowsearch_block.classList.remove('visually-hidden')
            }
