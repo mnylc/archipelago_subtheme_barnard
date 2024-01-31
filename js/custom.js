@@ -13,7 +13,7 @@
          const $narrowsearch_block = document.querySelectorAll('#block-narrowyoursearch, #block-narrowyoursearch-2');
          if ($narrowsearch_block.length > 0) {
            [].forEach.call($narrowsearch_block, function (el) {
-             const $facets = $narrowsearch_block.parentElement.querySelectorAll('.block-facets:not(.hidden)');
+             const $facets = el.parentElement.querySelectorAll('.block-facets:not(.hidden)');
              if ($facets.length > 0) {
                el.classList.remove('visually-hidden')
              }
