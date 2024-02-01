@@ -757,6 +757,31 @@ border: 0;
           }
         }
       }
+      //when exposed.
+      .block-views-exposed-filter-blockadvanced-solr-search-content-page-1 {
+        .views-exposed-form {
+          .form-row {
+            min-height: 0;
+            width: 100%;
+            flex-flow: column;
+            fieldset {
+              min-height: 0;
+              flex-direction: column !important;
+            }
+            .fieldset-wrapper {
+              display: flex;
+              column-gap: 1rem;
+              label {
+                @extend .visually-hidden;
+              }
+              .js-form-item {
+                display: flex;
+                flex-grow: 1;
+              }
+            }
+          }
+        }
+      }
     }
 
     /* Exposed form overrides based on bef */
