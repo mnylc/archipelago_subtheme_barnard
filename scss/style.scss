@@ -758,8 +758,7 @@ border: 0;
         }
       }
       //when exposed.
-      .block-views-exposed-filter-blockadvanced-solr-search-content-page-1 {
-        .views-exposed-form {
+      .views-exposed-form.block-views-exposed-filter-blockadvanced-solr-search-content-page-1 {
           .form-row {
             min-height: 0;
             width: 100%;
@@ -780,7 +779,6 @@ border: 0;
               }
             }
           }
-        }
       }
     }
 
