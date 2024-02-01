@@ -16,10 +16,10 @@
              // We assume here single empty per page ok? don't ask for more.
              const $empty_view = document.querySelectorAll('.view-empty');
              if ($empty_view.length > 0) {
-               el.classList.remove('visually-hidden')
+               el.classList.add('visually-hidden')
              }
              else {
-               el.classList.add('visually-hidden')
+               el.classList.remove('visually-hidden')
              }
            });
          }
