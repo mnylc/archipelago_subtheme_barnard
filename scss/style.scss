@@ -881,4 +881,145 @@ border: 0;
   }
 }
 
+/* Barnard Additions for Collections Page CSS */
+
+/* Grid/Button div styles */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column {
+  position: relative;
+  max-width: 23rem;
+  min-width: 23rem;
+  max-height: 27rem;
+  min-height: 27rem;
+  margin: 1.3rem;
+  background-color: rgba(54,54,68,.95);
+  outline-width: 0.1rem;
+  outline-style: solid;
+  -webkit-transition: background-color .3s ease-out;
+  -o-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
+  overflow: hidden;
+  padding: 0;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover {
+  outline-width: 0.3rem;
+  outline-color: #f5f2e5;
+}
+
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column i{
+  padding: 5rem 6.5rem;
+  color: #f5f2e5;
+  width: 100%;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover i{
+   color: rgba(54,54,68,.95);
+}
+
+/* Image container */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field-field-descriptive-metadata {
+  max-height: 19rem;
+  min-height: 19rem;
+}
+
+
+/* Hacky full-size link on hover */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field-field-descriptive-metadata a {
+  height: 150%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* Image height and scale up on hover */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field-field-descriptive-metadata a img {
+  width: 100%;
+  border-radius: 0 !important;
+  max-height: 19rem;
+  min-height: 19rem;
+  transition: transform .2s ease-out,-webkit-transform .2s ease-out,-o-transform .2s ease-out;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  object-position:  50% 0;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field-field-descriptive-metadata a img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}    
+
+/* Description span - initially hidden */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-description {
+  position: absolute;
+  background-color: #f5f2e5;
+  -webkit-transform: translateY(86%);
+  -ms-transform: translateY(86%);
+  -o-transform: translateY(86%);
+  transform: translateY(86%);
+  padding: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  visibility: hidden;
+  opacity: .9;
+}
+
+/* Show description on hover */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field.views-field-description {
+  visibility: visible;
+}
+
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-description a {
+  color: #f5f2e5;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 1rem;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field.views-field-description a {
+  text-decoration: none;
+  color: rgba(54,54,68,.95);
+  visibility: visible;
+}
+
+/* Title size and center */
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field.views-field-title {
+  background-color: #f5f2e5;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-title span.field-content a{
+  color: #f5f2e5;
+}
+
+#views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column:hover span.views-field.views-field-title span.field-content a{
+  color: rgba(54,54,68,.95);
+  text-decoration: none;
+}
+
+/* Hacky Responsive Margin */
+@media only screen and (max-width: 530px) {
+  .archipelago-barnard-theme.path-collections #content.main-content .views-element-container {
+      margin-left: 0 !important;
+  }
+}
 
