@@ -956,15 +956,10 @@ border: 0;
 /* Description span - initially hidden */
 #views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-description {
   position: absolute;
+  bottom: 7rem;
+  left: 0;
   background-color: #f5f2e5;
-  -webkit-transform: translateY(86%);
-  -ms-transform: translateY(86%);
-  -o-transform: translateY(86%);
-  transform: translateY(86%);
-  padding: 0; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  padding: 0;
   visibility: hidden;
   opacity: .9;
 }
@@ -1015,6 +1010,11 @@ border: 0;
   color: rgba(54,54,68,.95);
   text-decoration: none;
 }
+@media only screen and (max-width: 400px) {
+  #views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column{
+   margin-left: .75rem !important;
+   }
+ }
 
 /* Hacky Responsive Margin */
 @media only screen and (max-width: 530px) {
