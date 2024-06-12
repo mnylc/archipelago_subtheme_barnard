@@ -668,10 +668,11 @@ border: 0;
   /* Views Results exception for advanced Search (aligned with Exposed form) */
   .archipelago-barnard-theme.path-advanced-search-results {
     #content.main-content {
-    .views-element-container {
+    .views-element-container, .block-facets-summary {
       margin-left: .3125rem
       }
     }
+
   // Padding for add more buttons on advanced search page.
     .views-exposed-form {
       .form-actions.mb-3 {
