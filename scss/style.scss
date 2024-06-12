@@ -446,6 +446,10 @@ border: 0;
       --bs-gutter-y: 0;
     }
   }
+
+
+
+
   /* Rest of the pages Page exception */
   .archipelago-barnard-theme:not(.path-frontpage) {
     #navbar-top {
@@ -550,9 +554,6 @@ border: 0;
 
       &.views-display-link-page_1 {
       }
-
-
-
 
       flex-shrink: 0;
       border: 1px solid var(--bs-primary);
@@ -664,6 +665,20 @@ border: 0;
       }
     }
   }
+  /* Views Results exception for advanced Search (aligned with Exposed form) */
+  .archipelago-barnard-theme.path-advanced-search-results {
+    #content.main-content {
+    .views-element-container {
+      margin-left: .3125rem
+      }
+    }
+  // Padding for add more buttons on advanced search page.
+    .views-exposed-form {
+      .form-actions.mb-3 {
+        padding-bottom: 1rem;
+      }
+    }
+  }
 
   .archipelago-barnard-theme {
     .navbar-dark {
@@ -734,6 +749,10 @@ border: 0;
     /* special class added via the UI for the advanced search */
     #page {
       .advanced-search-box {
+        .view-header {
+          padding-top: 1rem;
+          padding-botton: 1rem;
+        }
         .views-exposed-form {
           .form-row {
             min-height: 0;
