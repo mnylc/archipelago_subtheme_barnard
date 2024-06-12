@@ -671,14 +671,15 @@ border: 0;
     .views-element-container, .block-facets-summary {
       margin-left: .3125rem
       }
+      .views-exposed-form {
+        .form-actions.mb-3 {
+          padding-bottom: 1rem;
+        }
+      }
     }
 
   // Padding for add more buttons on advanced search page.
-    .views-exposed-form {
-      .form-actions.mb-3 {
-        padding-bottom: 1rem;
-      }
-    }
+
   }
 
   .archipelago-barnard-theme {
