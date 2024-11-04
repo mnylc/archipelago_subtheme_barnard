@@ -663,6 +663,15 @@ border: 0;
           padding-bottom: map-get($spacers, 4);
         }
       }
+      div.field  {
+        .view-content {
+          margin-bottom: 0;
+          &.row > div {
+            border-bottom:none;
+            margin-bottom:0;
+          }
+        }
+      }
     }
   }
   /* Views Results exception for advanced Search (aligned with Exposed form) */
@@ -972,7 +981,7 @@ border: 0;
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
-}    
+}
 
 /* Description span - initially hidden */
 #views-bootstrap-collections-using-solr-search-browse-collections.grid div.row div.d-flex.flex-column span.views-field.views-field-description {
