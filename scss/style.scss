@@ -663,6 +663,19 @@ border: 0;
           padding-bottom: map-get($spacers, 4);
         }
       }
+      .dropdown-menu {
+        .view-content {
+          margin-bottom: 0;
+          &.row > div {
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+
+
+
       div.field  {
         .view-content {
           margin-bottom: 0;
